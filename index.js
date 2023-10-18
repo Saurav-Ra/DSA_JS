@@ -36,11 +36,18 @@ class LinkedList {
     this.tail = pre;
     this.tail.next = null;
     this.length--;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
+    }
+    return temp;
   }
 }
 
 let myLinkedList = new LinkedList(7);
 myLinkedList.push(4);
+console.log(myLinkedList);
+myLinkedList.pop();
 console.log(myLinkedList);
 myLinkedList.pop();
 console.log(myLinkedList);
